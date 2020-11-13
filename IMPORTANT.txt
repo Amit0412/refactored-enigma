@@ -1,0 +1,147 @@
+->WHAT IS GIT?(DISTRIBUTED  VCS)
+
+GIT IS A VERSION CONTROL SYSTEM...MAIN MOTIVE IS TO KEEP TRACK RECORD OF WHATEVER CHANGES HAVE BEEN MADE..............IN THE SOFTWARE.
+->VERSION CONTROL SYSTEM?
+
+ KEEP TRACKS
+->BENEFITS OF VCS
+
+ 1)EASILY FILE RECOVERY(DELETED FILE CAN BE BACK)
+ 2)WE CAN GET NOTIFY THE ANY ISSUE(BY WHOM,WHEN)[PULL REQUEST TYPE][PROBLEM CAN BE NOTIFIED]
+
+ 3)ROLL BACK(WE CAN GO TO PREVIOUS WORKING STATE)
+
+ ->KEY WORDS
+ FINAL COPY IN CENTRALIZED SERVER,,,MASTER PROGRAM IN SERVER
+
+ DISTRIBUTED VCS
+ ALL HISTORY TO EVERYONE...IF SERVER DAMAGE THEN ALSO ALL BACKUP IS PROVIDED TO ALL.
+
+
+ WHY GITHUB?
+ ->GITHUB IS HOSTING SERVICE WHO GIT HOST GIT REPO.
+
+ GIT FEATURES
+ ->WHEN REPO MADE SO .GIT FOLDER MADE
+ ->ALMOST OP ARE LOCAL.THEN PUSH IT TO GITHUB.SERVER
+
+ REMOTE(NETWORK SE DOWNLOADING)
+ REMOTE REPO(WHEN REPO IS ON SERVER)
+
+ GIT BASH IS A TERMINAL.
+
+ 1)Type git coomand in order to know various commands.
+
+
+ GIT INSTALLATION
+ A)GIT COMMAND LINE AND GIT BASH WE GOT.
+
+ cd=change directory and run git commands and it will run for that folder only.
+
+
+ step 1)Open git bash in particular folder and enter username n email to notify in git.
+git config --global user.name Amit0412
+git config --global user.email amitpandharikar@gmail.com
+
+git config user.name tells name
+
+
+#WORKFLOW OF GIT(BRANCH BY DEFAULT IS MASTER(MAIN BRANCH))
+1)WORKING DIRECTORY 2)STAGING AREA 3)GIT REPO
+
+STAGE AREA->PASS TO NXT COMMIT                                                                                      NOTE
+COMMIT->SNAPSHOT                                                                                                              1)FIRST GIT ADD
+                                                                                                                                                   2)GIT COMMIT
+PRACTICAL GIT                      
+->git status(checks status)                                                                                                        NOTE
+->#creating creating repo(git init)..this means this folder is git repo                                       rm -rf.git
+->After git init I entered git status from that tracking started
+->FIRST MAKE FILE TRACK THEN COMMIT
+
+GIT ADD --A MEANS SAARI FILES KO STAGING AREAS MEIN DALDO..  (--a means all)
+  ->After doing this if we enter git status so all files gets green in color  earlier it was red
+
+  ->git commit -m "intial commit"
+
+  ->In order to know what commit is to be made so use this
+  ->git log
+
+  ->If i make changes in any file so git will automatically track it.(modified)
+  then enter git status so it will detect.
+
+  ->If lets suppose two files are untracked but I want to commit one only so add
+  ->git add "filename"
+(IMPORTANT POINT)IF 2 FILES MODIFIED NUT U WANT TO ADD ONE FOR STAGE SO STAGE VIA GIT ADD FILE NAME THEN COMMIT AND THEN STATUS SO SECOND FILE WILL BE STILL UNTRACKED.)
+
+->Git log tells history of commit.
+
+
+
+->CLONING THE REPO(GITHUB)
+COPY THE URL FROM GITHUB(HTTP OR SSH KEY)
+
+->git clone url
+So what does git clone does?
+
+->I have copied the link then open the folder and entretd git clone and link..Sio whatever be the data in that repo that will be downloaded in that folder automaticaly.
+
+->COPY OF THAT FILE KE MALIK HAI HUM.NOT ON GITHUB ORIGINAL
+#LINUX COMMANDS
+cd=change directory
+pwd=present directory
+ls=list
+touch error.log(IT basically makes the file)
+FILE STATUS LIFE CYCLE:
+->SO WHAT DOES REPO MEAN?IT IS A FOLDER WHICH CONSISY OF .GIT FILE AND OTHER FOLDERS AND IT IS BEEN TRACKED VIA GIT.
+->LIFE CYCLE OF UN TRACKED TO UNMODIFIED(TRACKED) THEN MODIFIED TO TRACKED..THEN COMMIT
+
+->NXT UP(GIT IGNORE)(HOW TO IGNORE THE FILE)
+touch .gitignore
+and sample.log  so this will get ignored.
+->IMP POINT(ANY CHANGE IN SAMPLE.LOG WHICH IS THERE IN .GITIGNORE SO IF WE RUN GIT STATUS SO THERE WILL BE WORK TREE FINE.
+
+->WE CAN IGNORE FOLDER TOO.dir/
+/dir/
+
+->git diff
+compares working dir with staging areas
+
+STAGING AREA VS COMMIT COMAPRE
+GIT DIFF --STAGED(understood with example)
+
+
+->skipping stage area
+
+git commit -a -m "direct commit"
+git status
+git commit wala likhne ki jarorrat nhi....auto commit..the main use
+untrack direct commit nhi first stage the above command..
+
+
+#Moving and renaming git files
+->RENAME
+
+#deleting file
+delete and then commit(easy way)
+
+git rm --cached re.txt
+
+GIT LOG SEPARATE DOCUMENT:->
+
+ALL ABOUT GIT LOG:
+BAHAR WALI GIT REPO NHI ANDER WALA FOLDER MY PANDAS IS REPO.
+
+git log -p(whole diff history in large file)
+git log -p -3 shows 3 commits along with diff.
+git log --stat(In short what hapeenened telling)
+git log --pretty=oneline(All commits are shown in one line indivisually)
+git log --pretty=short(short mein commits)
+git log --pretty=full(little more info)
+
+#WE CAN HAVE COMMIT HISTORY WITH SOME TIME FILTER.
+git log --since=2.days(last 2 days ka history of commit) it can be weeks ,months,years..........
+#
+git log --pretty=format:%h--"%ae ya ah"...author email...blah...blah.........
+
+
+#CHANGE THE COMMIT OF OTHER'S.......(IGNORED)
